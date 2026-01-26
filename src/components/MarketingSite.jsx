@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { globalStyles } from '../styles/theme'
 
 const MarketingSite = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -167,7 +166,6 @@ const MarketingSite = () => {
 
   return (
     <div style={{ background: '#0a0a0f', minHeight: '100vh' }}>
-      <style>{globalStyles}</style>
 
       {/* Ambient Background Effects */}
       <div style={{
@@ -1299,22 +1297,6 @@ const MarketingSite = () => {
         </div>
       </footer>
 
-      {/* Responsive Styles */}
-      <style>{`
-        @media (max-width: 768px) {
-          .desktop-nav {
-            display: none !important;
-          }
-          .mobile-menu-btn {
-            display: block !important;
-          }
-        }
-        @media (min-width: 769px) {
-          .mobile-menu-btn {
-            display: none !important;
-          }
-        }
-      `}</style>
     </div>
   )
 }
