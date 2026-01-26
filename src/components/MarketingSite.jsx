@@ -320,15 +320,11 @@ const MarketingSite = () => {
         position: 'relative',
         zIndex: 1
       }}>
-        <div style={{
+        <div className="hero-grid" style={{
           maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '60px',
-          alignItems: 'center'
+          margin: '0 auto'
         }}>
-          <div>
+          <div className="hero-content">
             <div className="fade-in-up" style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -365,10 +361,7 @@ const MarketingSite = () => {
               Build a complete pet companion ecosystem—photos, memories, health records, and family sharing—all beautifully organized in one place.
             </p>
 
-            <div className="fade-in-up delay-3" style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '16px',
+            <div className="fade-in-up delay-3 hero-buttons" style={{
               marginBottom: '48px'
             }}>
               <a href="#pricing" className="btn-primary" style={{
@@ -380,6 +373,7 @@ const MarketingSite = () => {
                 fontWeight: '600',
                 display: 'inline-flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 gap: '8px'
               }}>
                 Create Your Napp
@@ -391,13 +385,16 @@ const MarketingSite = () => {
                 color: '#f1f5f9',
                 textDecoration: 'none',
                 fontSize: '16px',
-                fontWeight: '600'
+                fontWeight: '600',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}>
                 See How It Works
               </a>
             </div>
 
-            <div className="fade-in-up delay-4" style={{
+            <div className="fade-in-up delay-4 hero-social-proof" style={{
               display: 'flex',
               alignItems: 'center',
               gap: '16px'
@@ -431,11 +428,7 @@ const MarketingSite = () => {
           </div>
 
           {/* Hero Visual */}
-          <div className="fade-in-up delay-2" style={{
-            position: 'relative',
-            display: 'flex',
-            justifyContent: 'center'
-          }}>
+          <div className="fade-in-up delay-2 hero-visual">
             {/* Phone Mockup */}
             <div style={{
               width: '280px',
@@ -475,7 +468,16 @@ const MarketingSite = () => {
                     marginBottom: '16px',
                     position: 'relative'
                   }}>
-                    <span style={{ fontSize: '64px' }}>🐕</span>
+                    <img
+                      src="https://image.admin.solutions/doggy-doodle-event-card-image_98d760f2-b2ca-4a3d-8dc1-f3eeac03a9b7/312d4906-a763-4e58-bdf0-c96a4cf2080d/0cfb0cc0-d285-44e9-a9a7-e1b924eb0ba4/98d760f2-b2ca-4a3d-8dc1-f3eeac03a9b7"
+                      alt="Biscuit - Dog Portrait"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        borderRadius: '16px'
+                      }}
+                    />
                     <div style={{
                       position: 'absolute',
                       top: '8px',
@@ -515,32 +517,18 @@ const MarketingSite = () => {
             </div>
 
             {/* Floating Cards */}
-            <div style={{
-              position: 'absolute',
+            <div className="floating-card" style={{
               top: '20%',
               left: '-20px',
-              background: 'rgba(30, 41, 59, 0.8)',
-              backdropFilter: 'blur(12px)',
-              padding: '12px 16px',
-              borderRadius: '12px',
-              border: '1px solid rgba(148, 163, 184, 0.1)',
-              animation: 'float 5s ease-in-out infinite',
               animationDelay: '1s'
             }}>
               <p style={{ fontSize: '11px', color: '#64748b' }}>Vaccinations</p>
               <p style={{ fontSize: '14px', color: '#22c55e', fontWeight: '600' }}>✓ All Current</p>
             </div>
 
-            <div style={{
-              position: 'absolute',
+            <div className="floating-card" style={{
               bottom: '30%',
               right: '-30px',
-              background: 'rgba(30, 41, 59, 0.8)',
-              backdropFilter: 'blur(12px)',
-              padding: '12px 16px',
-              borderRadius: '12px',
-              border: '1px solid rgba(148, 163, 184, 0.1)',
-              animation: 'float 5s ease-in-out infinite',
               animationDelay: '2s'
             }}>
               <p style={{ fontSize: '11px', color: '#64748b' }}>Memories</p>

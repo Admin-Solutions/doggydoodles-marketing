@@ -81,6 +81,82 @@ export const globalStyles = `
     -webkit-text-fill-color: transparent;
     animation: gradientFlow 4s ease infinite;
   }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .floating-card {
+    position: absolute;
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(12px);
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .hero-content {
+      align-items: center;
+    }
+
+    .hero-content p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+      width: 100%;
+    }
+
+    .hero-buttons a {
+      flex: 1;
+      min-width: 200px;
+      max-width: 300px;
+      justify-content: center;
+    }
+
+    .hero-social-proof {
+      justify-content: center;
+    }
+
+    .hero-visual {
+      order: -1;
+    }
+
+    .floating-card {
+      display: none;
+    }
+  }
 `
 
 export const colors = {
