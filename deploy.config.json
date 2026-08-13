@@ -1,0 +1,32 @@
+{
+  "apiBase": "https://seemynft.page",
+  "repoUrl": "github.com/admin-solutions/doggydoodles-marketing",
+  "artifacts": [
+    {
+      "name": "dd-js",
+      "env": "both",
+      "file": "dist/js/index-*.js",
+      "tableName": "AB RD Java Script File",
+      "controlGuid": "58854df7-05b1-401d-a35e-4b7f1e407fc2",
+      "raidId": 831832,
+      "raidGuid": "6057513F-A075-4A23-9A9E-503F9E634C8D",
+      "seriesGuid": "DC3C75DE-AFFD-4C91-9944-D3EE1B803C16",
+      "fileFriendlyName": "doggy-doodles-website-react-java-script-file",
+      "expectMarker": "DoggyDoodles",
+      "minKb": 100
+    },
+    {
+      "name": "dd-css",
+      "env": "both",
+      "file": "dist/css/index-*.css",
+      "tableName": "AB RD CSS File",
+      "controlGuid": "4E187783-C778-4238-90E8-E8C82C29E32A",
+      "raidId": 831831,
+      "raidGuid": "846B1F20-DE9E-49B1-9729-209CCBE1037B",
+      "seriesGuid": "6EE5D974-89F0-45C9-9D74-A99958770FE2",
+      "fileFriendlyName": "doggy-doodles-website-react-css-file",
+      "expectMarker": "hero-social-proof",
+      "minKb": 2
+    }
+  ]
+}
