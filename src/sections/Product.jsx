@@ -2,6 +2,10 @@ import React from 'react'
 import { colors } from '../styles/theme'
 import { Section, SectionHeading, Card, Pill, Grid, FeatureCard, Note } from './shared'
 
+/* Elena's watercolour, served from the CDN (Aux Blob series). Same drawing the
+   site used before the rebuild — the portrait IS the identity. */
+const REX_PORTRAIT = 'https://image.admin.solutions/doggy-doodle-event-card-image_98d760f2-b2ca-4a3d-8dc1-f3eeac03a9b7/312d4906-a763-4e58-bdf0-c96a4cf2080d/0cfb0cc0-d285-44e9-a9a7-e1b924eb0ba4/98d760f2-b2ca-4a3d-8dc1-f3eeac03a9b7'
+
 /* ═══════════════════════════════════════════════════════════════
    HERO
    ═══════════════════════════════════════════════════════════════ */
@@ -72,9 +76,18 @@ export const Hero = () => (
             display: 'flex', flexDirection: 'column', alignItems: 'center',
             justifyContent: 'center', gap: '16px', padding: '32px'
           }}>
-            <div style={{ fontSize: '84px' }}>🐕</div>
+            <img
+              src={REX_PORTRAIT}
+              alt="Rex — watercolour portrait by Elena"
+              loading="eager"
+              style={{
+                width: '180px', aspectRatio: '5 / 7', objectFit: 'cover',
+                borderRadius: '20px', border: `1px solid ${colors.border}`,
+                boxShadow: '0 18px 40px rgba(0, 0, 0, 0.45)'
+              }}
+            />
             <p style={{ fontSize: '22px', fontWeight: '700', color: colors.text }}>Rex</p>
-            <p style={{ fontSize: '14px', color: colors.textDim }}>Golden Retriever · 4 yrs</p>
+            <p style={{ fontSize: '14px', color: colors.textDim }}>Cockapoo · 4 yrs</p>
             <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'center' }}>
               <Pill color={colors.green}>Vaccines current</Pill>
               <Pill color={colors.gold}>Kibble 240</Pill>
