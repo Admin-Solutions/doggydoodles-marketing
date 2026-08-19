@@ -174,17 +174,17 @@ const TIERS = [
   {
     name: 'Pup', price: 'Free', icon: '🐶', color: colors.textMuted,
     blurb: 'Everything a dog needs to exist properly.',
-    features: ['Dog profile & photo gallery', 'Basic health record', 'Packs, local search & events', 'Lost-dog alerts', 'Earn Kibble']
+    features: ['Dog profile & photo gallery', 'Basic health record & chip logging', 'Packs, local search & events', 'Lost-dog alerts & QR tag', 'Rainbow Bridge', 'Earn Kibble']
   },
   {
-    name: 'Pack', price: '$8', period: '/mo', icon: '🐕', color: colors.accent, popular: true,
+    name: 'Pack', price: '$5', period: '/mo', annual: '$49.99/year', icon: '🐕', color: colors.accent, popular: true,
     blurb: 'For people who actually hand over the lead.',
-    features: ['Everything in Pup', 'Pass the Lead — records, permissions & spend', 'Unlimited records & documents', 'Travel & boarding packs', 'Know Your Laws', 'Matching & getaways']
+    features: ['Everything in Pup', 'Pass the Lead — records, permissions & spend', 'Full health record with documents', 'Travel & boarding packs', 'Know Your Laws', 'Playdates & matching', 'Multiple dogs']
   },
   {
-    name: 'Best in Show', price: '$18', period: '/mo', icon: '👑', color: colors.gold,
+    name: 'Best in Show', price: '$8', period: '/mo', annual: '$74.99/year', icon: '👑', color: colors.gold,
     blurb: 'The whole thing, for the whole family.',
-    features: ['Everything in Pack', 'Family sharing & co-ownership', 'Multiple dogs', 'Priority vendor booking', 'Insurance & vet features first', 'Kibble bonus every month']
+    features: ['Everything in Pack', 'Family sharing & co-ownership', 'Doggy getaways', 'Priority vendor booking', 'Insurance & vet features first', 'Monthly Kibble allowance']
   }
 ]
 
@@ -206,10 +206,15 @@ export const Membership = () => (
           <div style={{ fontSize: '36px', marginBottom: '12px' }}>{t.icon}</div>
           <h3 style={{ fontSize: '22px', fontWeight: '700', color: colors.text, marginBottom: '6px' }}>{t.name}</h3>
           <p style={{ fontSize: '14px', color: colors.textMuted, marginBottom: '16px' }}>{t.blurb}</p>
-          <p style={{ marginBottom: '24px' }}>
+          <p style={{ marginBottom: t.annual ? '6px' : '24px' }}>
             <span style={{ fontSize: '38px', fontWeight: '800', color: t.color }}>{t.price}</span>
             {t.period && <span style={{ fontSize: '16px', color: colors.textDim }}>{t.period}</span>}
           </p>
+          {t.annual && (
+            <p style={{ fontSize: '14px', color: colors.textDim, marginBottom: '24px' }}>
+              or <span style={{ color: colors.textMuted, fontWeight: '600' }}>{t.annual}</span>
+            </p>
+          )}
           <div style={{ flex: 1 }}>
             {t.features.map((f, j) => (
               <div key={j} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', padding: '7px 0' }}>
@@ -229,7 +234,7 @@ export const Membership = () => (
       ))}
     </Grid>
     <p style={{ fontSize: '14px', color: colors.textDim, textAlign: 'center', marginTop: '32px' }}>
-      Prices are indicative while we finalise launch pricing.
+      Annual billing works out cheaper than paying monthly. Cancel whenever you like.
     </p>
   </Section>
 )
