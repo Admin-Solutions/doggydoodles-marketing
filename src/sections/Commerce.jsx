@@ -39,7 +39,7 @@ export const Marketplace = () => (
 )
 
 /* ═══════════════════════════════════════════════════════════════
-   ELENA'S STUDIO — the founding vendor
+   PORTRAIT STUDIO — the founding vendor
    ═══════════════════════════════════════════════════════════════ */
 const PORTRAIT_TIERS = [
   { name: 'Sketch', price: 49, icon: '✏️', blurb: 'A hand-drawn portrait and a profile to hang it on.' },
@@ -47,7 +47,7 @@ const PORTRAIT_TIERS = [
   { name: 'Masterpiece', price: 299, icon: '👑', blurb: 'The full piece, a physical keepsake tag, and priority booking.' }
 ]
 
-export const ElenaStudio = () => (
+export const PortraitStudio = () => (
   <Section id="studio" tint>
     <div style={{
       background: 'linear-gradient(145deg, rgba(245,158,11,0.07), rgba(245,158,11,0.02))',
@@ -56,14 +56,14 @@ export const ElenaStudio = () => (
       padding: 'clamp(32px, 5vw, 56px)'
     }}>
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <div style={{ marginBottom: '16px' }}><Pill color={colors.gold}>🖌️ Our founding vendor</Pill></div>
+        <div style={{ marginBottom: '16px' }}><Pill color={colors.gold}>🖌️ Where this all started</Pill></div>
         <h2 style={{ fontSize: 'clamp(30px, 5vw, 44px)', fontWeight: '700', color: colors.text, marginBottom: '16px' }}>
-          Elena's Portrait Studio
+          The Portrait Studio
         </h2>
         <p style={{ fontSize: '18px', color: colors.textMuted, lineHeight: '1.8', maxWidth: '680px', margin: '0 auto' }}>
-          DoggyDoodles started as Elena's hand-painted pet portraits, and she's still
-          the one holding the brush. Every portrait is painted from your photos, in
-          watercolour, by hand.
+          DoggyDoodles started as hand-painted pet portraits, and they are still
+          painted by hand. Every portrait is done in watercolour, from your own
+          photos.
         </p>
       </div>
 
@@ -139,7 +139,7 @@ export const Kibble = () => (
       <Card accent={colors.gold}>
         <div style={{ marginBottom: '16px' }}><Pill color={colors.gold}>Spend it</Pill></div>
         {[
-          ['🎨', 'Portraits from Elena\'s studio'],
+          ['🎨', 'Hand-painted portraits'],
           ['✂️', 'Grooming, walking, training'],
           ['🎟️', 'Event tickets'],
           ['🦴', 'Treats and gear'],

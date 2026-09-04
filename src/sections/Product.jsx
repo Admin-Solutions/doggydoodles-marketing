@@ -2,7 +2,7 @@ import React from 'react'
 import { colors } from '../styles/theme'
 import { Section, SectionHeading, Card, Pill, Grid, FeatureCard, Note } from './shared'
 
-/* Elena's watercolour, served from the CDN (Aux Blob series). Same drawing the
+/* The watercolour portrait, served from the CDN (Aux Blob series). Same drawing the
    site used before the rebuild — the portrait IS the identity. */
 const REX_PORTRAIT = 'https://image.admin.solutions/doggy-doodle-event-card-image_98d760f2-b2ca-4a3d-8dc1-f3eeac03a9b7/312d4906-a763-4e58-bdf0-c96a4cf2080d/0cfb0cc0-d285-44e9-a9a7-e1b924eb0ba4/98d760f2-b2ca-4a3d-8dc1-f3eeac03a9b7'
 
@@ -78,7 +78,7 @@ export const Hero = () => (
           }}>
             <img
               src={REX_PORTRAIT}
-              alt="Rex — watercolour portrait by Elena"
+              alt="Rex — hand-painted watercolour portrait"
               loading="eager"
               style={{
                 width: '180px', aspectRatio: '5 / 7', objectFit: 'cover',

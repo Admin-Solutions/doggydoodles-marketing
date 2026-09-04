@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { colors } from '../styles/theme'
 import { Hero, TheProblem, DogIdentity, PassTheLead, HealthVault, KnowYourLaws } from '../sections/Product'
 import { ThePack, Matching, LostDog } from '../sections/Community'
-import { Marketplace, ElenaStudio, Kibble, Membership } from '../sections/Commerce'
+import { Marketplace, PortraitStudio, Kibble, Membership } from '../sections/Commerce'
 import { NappStories, Roadmap, Faq, FinalCta } from '../sections/Closing'
 
 const NAV = [
@@ -25,7 +25,7 @@ const FOOTER = [
   {
     heading: 'Marketplace',
     links: [
-      ['Find a vendor', '#marketplace'], ['Elena\'s Studio', '#studio'],
+      ['Find a vendor', '#marketplace'], ['The Portrait Studio', '#studio'],
       ['Become a vendor', '#marketplace'], ['What\'s coming', '#roadmap']
     ]
   },
@@ -157,7 +157,7 @@ const MarketingSite = () => {
       <LostDog />
       <KnowYourLaws />
       <Marketplace />
-      <ElenaStudio />
+      <PortraitStudio />
       <Kibble />
       <Membership />
       <NappStories />
